@@ -18,9 +18,9 @@ import gov.nist.secauto.metaschema.cli.processor.command.ExtraArgument;
 import gov.nist.secauto.metaschema.cli.processor.command.ICommandExecutor;
 import gov.nist.secauto.metaschema.core.metapath.DynamicContext;
 import gov.nist.secauto.metaschema.core.metapath.StaticContext;
-import gov.nist.secauto.metaschema.core.metapath.item.node.IDefinitionNodeItem;
-import gov.nist.secauto.metaschema.core.metapath.item.node.IModuleNodeItem;
-import gov.nist.secauto.metaschema.core.metapath.item.node.INodeItemFactory;
+import gov.nist.secauto.metaschema.core.metapath.node.IDefinitionNodeItem;
+import gov.nist.secauto.metaschema.core.metapath.node.IModuleNodeItem;
+import gov.nist.secauto.metaschema.core.metapath.node.INodeItemFactory;
 import gov.nist.secauto.metaschema.core.model.IModule;
 import gov.nist.secauto.metaschema.core.model.constraint.IAllowedValue;
 import gov.nist.secauto.metaschema.core.model.constraint.IAllowedValuesConstraint;
@@ -306,7 +306,7 @@ public class ListAllowedValuesCommand
       generator.writeStringField("identifier", constraint.getId());
     }
     generator.writeStringField("location", metapath(record.getLocation()));
-    generator.writeStringField("target", constraint.getTarget());
+    generator.writeStringField("target", constraint.getTarget().getPath());
 
     List<String> values = constraint.getAllowedValues().values().stream()
         .map(IAllowedValue::getValue)

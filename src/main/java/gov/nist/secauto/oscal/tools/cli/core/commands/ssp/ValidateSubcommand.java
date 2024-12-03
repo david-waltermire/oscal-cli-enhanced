@@ -5,10 +5,10 @@
 
 package gov.nist.secauto.oscal.tools.cli.core.commands.ssp;
 
-import gov.nist.secauto.metaschema.core.model.util.JsonUtil;
-import gov.nist.secauto.metaschema.core.model.util.XmlUtil;
+import gov.nist.secauto.metaschema.core.model.json.JsonUtil;
 import gov.nist.secauto.metaschema.core.model.validation.JsonSchemaContentValidator;
 import gov.nist.secauto.metaschema.core.model.validation.XmlSchemaContentValidator;
+import gov.nist.secauto.metaschema.core.model.xml.XmlUtil;
 import gov.nist.secauto.metaschema.core.util.CollectionUtil;
 import gov.nist.secauto.metaschema.core.util.ObjectUtils;
 import gov.nist.secauto.oscal.lib.OscalBindingContext;
